@@ -5,6 +5,6 @@ class Project < ActiveRecord::Base
   validates :offices, presence: true
 
   def select
-    selected = !selected
+    update_attribute(:selected, !selected)
   end
 end

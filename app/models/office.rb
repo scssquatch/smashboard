@@ -7,4 +7,8 @@ class Office < ActiveRecord::Base
   def short_name
     name.downcase.tr(' ','_')
   end
+
+  def selected?
+    projects.where(selected: true).present?
+  end
 end

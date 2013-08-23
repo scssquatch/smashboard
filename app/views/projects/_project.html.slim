@@ -1,1 +1,2 @@
-= link_to proj.name, select_project_path(proj.id), remote: true, class: "hide #{'selected' if proj.selected?} #{proj.office_names}"
+= link_to project.name, select_project_path(project.id),
+  remote: true, class: "#{'selected' if project.selected?} #{'hide' unless true }"
