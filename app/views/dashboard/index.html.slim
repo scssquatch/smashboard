@@ -1,0 +1,23 @@
+header
+  .container
+    h1.logo
+      = link_to "SMASHBOARD", root_url
+    a.sidebar-close.hide href="#"
+    a.menu href="#"
+.container
+  .offices
+    = render @offices
+  .projects
+    = render @projects
+  .feed
+    = render 'update', project: "Nexia", type: "pivotal",
+      time: "2:40 PM", content: "This is a test"
+
+    = render 'update', project: "Chatter", type: "airbrake",
+      time: "2:38 PM", content: "Chatting it Up!"
+
+    = render 'update', project: "AT&T", type: "github",
+      time: "2:30 PM", content: "This is another test."
+
+    = render 'update', project: "The Weather Channel", type: "heroku",
+      time: "2:28 PM", content: "Look at dat weather!"

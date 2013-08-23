@@ -1,0 +1,121 @@
+@import bourbon/bourbon
+
+$heroku: #7569d5
+$pivotal: #b41427
+$github: #4381c6
+$airbrake: #ec792d
+$info: #fff
+$time: .1s
+
+.metric
+  width: 33%
+  min-width: 260px
+  display: inline-block
+  margin-bottom: 20px
+  vertical-align: top
+
+  .type
+    top: -1px
+
+  input
+    width: 75%
+
+    &[type=submit]
+      width: 20%
+
+      &:hover
+        cursor: pointer
+
+  .chzn-container
+    width: 75%
+
+  &.github
+    h3
+      color: $github
+
+    .active
+      box-shadow: 0 0 3px 2px rgba($github, .5)
+
+      &:hover
+        box-shadow: 0 0 3px 3px rgba($github, .8)
+
+  &.heroku
+    h3
+      color: $heroku
+
+    .active
+      box-shadow: 0 0 3px 2px rgba($heroku, .5)
+
+      &:hover
+        box-shadow: 0 0 3px 3px rgba($heroku, .8)
+
+  &.pivotal
+    h3
+      color: $pivotal
+      text-shadow: 0 -1px 0px rgba(#000, .5)
+
+    .active
+      box-shadow: 0 0 3px 2px rgba($pivotal, .5)
+
+      &:hover
+        box-shadow: 0 0 3px 3px rgba($pivotal, .8)
+
+    .quit button
+      font-weight: bold
+      color: rgba($pivotal, .8)
+
+      &:hover
+        color: rgba($pivotal, 1)
+
+
+  &.airbrake
+    h3
+      color: $airbrake
+
+    .active
+      box-shadow: 0 0 3px 2px rgba($airbrake, .5)
+
+      &:hover
+        box-shadow: 0 0 3px 3px rgba($airbrake, .8)
+
+  &.info
+    h3
+      color: $info
+
+    .active
+      box-shadow: 0 0 3px 2px rgba($info, .5)
+
+      &:hover
+        box-shadow: 0 0 3px 3px rgba($info, .8)
+
+  .description
+    padding: 15px
+    margin-bottom: 20px
+    text-shadow: 0 -1px 0px rgba(#000, .9)
+    +transition (all .3s)
+
+    &:hover
+      box-shadow: 0 0 3px 3px rgba(#000, .4)
+
+    p
+      text-shadow: 0 1px 2px #000
+      font-size: 14px
+
+    h3
+      margin: 0 0 20px 0
+      cursor: pointer
+
+  .summary
+    margin-bottom: 20px
+
+  .instructions
+    display: none
+
+  .right
+    float: right
+
+  .left
+    float: left
+
+.container.edit
+  margin-top: 70px
