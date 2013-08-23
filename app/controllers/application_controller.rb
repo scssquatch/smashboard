@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_offices_and_projects
 
   def set_offices_and_projects
-    @offices = Office.all
-    @projects = Project.all
+    @offices = Office.all.order('name ASC')
+    @projects = Project.all.order('name ASC')
   end
 end

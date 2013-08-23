@@ -1,8 +1,8 @@
 Smashboard::Application.routes.draw do
   root 'dashboard#index'
 
-  get 'projects/:id/select' => 'projects#select', as: 'select_project'
-  get 'projects/select_all' => 'projects#select_all', as: 'select_all_projects'
+  get 'projects/:project_id/:office_id/select' => 'projects#select', as: 'select_project'
+  get 'offices/:id/open' => 'offices#open', as: 'open_projects'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

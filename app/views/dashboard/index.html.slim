@@ -8,7 +8,6 @@ header
   .offices
     = render @offices
   .projects
-    = render @projects
   .feed
     = render 'update', project: "Nexia", type: "pivotal",
       time: "2:40 PM", content: "This is a test"
@@ -21,3 +20,5 @@ header
 
     = render 'update', project: "The Weather Channel", type: "heroku",
       time: "2:28 PM", content: "Look at dat weather!"
+  .settings
+    h1 hello

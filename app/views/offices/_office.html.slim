@@ -1,1 +1,2 @@
-= link_to office.name, "#", class: "#{office.short_name} #{'selected' if office.selected?}"
+= link_to office.name, open_projects_path(office.id), remote: true,
+  class: "#{'selected' if office.selected?}"

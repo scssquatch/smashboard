@@ -9,6 +9,10 @@ class Office < ActiveRecord::Base
   end
 
   def selected?
-    projects.where(selected: true).present?
+    selected_projects.present?
+  end
+
+  def selected_projects
+    projects.where(selected: true)
   end
 end

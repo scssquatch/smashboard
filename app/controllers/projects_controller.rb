@@ -12,11 +12,8 @@ class ProjectsController < ApplicationController
   end
 
   def select
-    Project.find(params[:id]).select
-  end
-
-  def select_all
-    Project.all.map{|proj| proj.update_attribute(:selected, true)}
+    @current_office = Office.find(params[:office_id])
+    Project.find(params[:project_id]).select
   end
 
 end
