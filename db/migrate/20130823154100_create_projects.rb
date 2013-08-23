@@ -2,7 +2,7 @@ class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
       t.string :name
-      t.array :office_ids
+      t.integer :office_project_id
 
       t.timestamps
     end
