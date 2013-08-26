@@ -25,4 +25,15 @@ describe Project do
     @project.selected.should be_true
   end
 
+  it "changes from unselected to selected" do
+    @project.select
+    @project.selected.should be_false
+  end
+
+  it "changes from selected to unselected" do
+    @project.update_attribute(:selected, false)
+    @project.select
+    @project.selected.should be_true
+  end
+
 end

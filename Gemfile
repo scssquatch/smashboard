@@ -62,12 +62,22 @@ group :development, :test do
 
   # Faker for testing
   gem 'faker'
-end
 
-group :test do
+  # For easy generation
   gem 'factory_girl_rails'
+
+  # Integration testing
   gem 'capybara'
   gem 'guard-rspec'
+
+  # cleaning db after tests
+  gem 'database_cleaner'
+
+  # selenium
+  gem 'selenium-webdriver'
+
+  # for saving pages
+  gem 'launchy'
 end
 
 group :doc do
