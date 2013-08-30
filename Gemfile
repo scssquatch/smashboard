@@ -37,6 +37,12 @@ gem 'coffee-rails', '~> 4.0.0'
 # slim stuff
 gem 'slim-rails'
 
+# Faye for API polling pub/sub
+gem 'faye'
+
+# Thin for pub sub
+gem 'thin'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
