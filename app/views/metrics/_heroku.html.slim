@@ -1,12 +1,10 @@
 = form_for metric, remote: true  do |f|
   .control-group
     = f.label "Heroku OAuth Token", class: "control-label"
-    .controls
-      = f.text_field :token
+    = f.text_field :token
   = f.hidden_field :name, value: "heroku"
   = f.hidden_field :project_id, value: @project.id
   .control-group
-    .controls
-      = f.submit "Submit", class: "left"
+    = f.submit "Submit", class: "left"
 .quit
   button.left Cancel

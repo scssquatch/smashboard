@@ -1,12 +1,9 @@
 = form_for @project, remote: true  do |f|
   .control-group
     = f.label :name, class: "control-label"
-    .controls
-      = f.text_field :name
+    = f.text_field :name
   .control-group
     = f.label :offices, class: "control-label"
-    .controls
-      = f.select(:office_ids, Office.all.map {|o| [ o.name, o.id ] }, {}, {multiple: true})
+    = f.select(:office_ids, Office.all.map {|o| [ o.name, o.id ] }, {}, {multiple: true})
   .control-group
-    .controls
-      = f.submit "Submit"
+    = f.submit "Submit"
