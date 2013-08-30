@@ -1,0 +1,23 @@
+header
+  .container
+    h1.logo
+      = link_to 'SMASHBOARD', root_url
+.container.edit
+  h2 = "Metrics for #{@project.name}"
+  .messages
+    ul.success
+    ul.error
+  = render 'metrics/metric', type: "info", header: "Basic Info",
+    summary: "Edit the Basic info of the project such as the name or the office it belongs to."
+
+  = render 'metrics/metric', type: "pivotal", header: "Pivotal Tracker",
+    summary: "This will give you constant updates of the activity feed of your project on Pivotal Tracker."
+
+  = render 'metrics/metric', type: "heroku", header: "Heroku",
+    summary: "This will send a service hook when you push to heroku. You must do this through your project on Heroku."
+
+  = render 'metrics/metric', type: "github", header: "Github",
+    summary: "This will send a service hook when you push to github. You must do this through your project on Github."
+
+  = render 'metrics/metric', type: "airbrake", header: "Airbrake",
+    summary: "This will grab airbrake errors and display them on the dashboard. This is filler text so they're the same height."

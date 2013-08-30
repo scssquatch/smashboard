@@ -1,0 +1,1 @@
+$('.metric.info .instructions').slideToggle()

@@ -1,0 +1,19 @@
+= form_for metric, remote: true  do |f|
+  .control-group
+    = f.label :username, class: "control-label"
+    .controls
+      = f.text_field :username
+  .control-group
+    = f.label :token, class: "control-label"
+    .controls
+      = f.text_field :token
+  .control-group
+    = f.label :metric_project_id, class: "control-label"
+    .controls
+      = f.text_field :metric_project_id
+
+  = f.hidden_field :name, value: "airbrake"
+  = f.hidden_field :project_id, value: @project.id
+  .control-group
+    .controls
+      = f.submit "Submit"

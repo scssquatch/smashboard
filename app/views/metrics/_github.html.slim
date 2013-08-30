@@ -1,0 +1,13 @@
+= form_for metric, remote: true  do |f|
+  .control-group
+    = f.label "Github OAuth Token", class: "control-label"
+    .controls
+      = f.text_field :token
+
+  = f.hidden_field :name, value: "github"
+  = f.hidden_field :project_id, value: @project.id
+  .control-group
+    .controls
+      = f.submit "Submit", class: "left"
+.quit
+  button.left Cancel

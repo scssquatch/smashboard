@@ -1,0 +1,8 @@
+.metric class="#{type}"
+  .description class="#{'active' if true }"
+    h3=header
+    .summary
+      p= summary
+    .instructions
+      - @metric = @metrics.where(name: type).first
+      = render "metrics/#{type}", metric: @metric.present? ? @metric : Metric.new

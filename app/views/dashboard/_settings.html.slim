@@ -1,0 +1,10 @@
+ul.success_messages
+ul.error_messages
+ul#projects
+  - @projects.each do |proj|
+    li
+      = proj.name
+      = link_to "Edit", edit_project_path(proj.id)
+br
+= link_to "New Project", "#", id: "expand_project_form"
+=render 'projects/form', project: @project

@@ -1,0 +1,16 @@
+= form_for metric, remote: true  do |f|
+  .control-group
+    = f.label "Pivotal Project ID", class: "control-label"
+    .controls
+      = f.text_field :metric_project_id
+  .control-group
+    = f.label :token, class: "control-label"
+    .controls
+      = f.text_field :token
+  = f.hidden_field :name, value: "pivotal"
+  = f.hidden_field :project_id, value: @project.id
+  .control-group
+    .controls
+      = f.submit "Submit", class: "left"
+.quit
+  button.right Quit Tracking
